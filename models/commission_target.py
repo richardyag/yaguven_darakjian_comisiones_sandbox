@@ -40,6 +40,7 @@ class YaguvenCommissionTarget(models.Model):
         required=True,
         index=True,
         domain="[('share', '=', False)]",
+        context={'active_test': False},
         tracking=True,
     )
     year = fields.Integer(
